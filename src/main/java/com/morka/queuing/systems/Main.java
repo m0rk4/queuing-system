@@ -144,17 +144,17 @@ public class Main {
         var failProb = (double) failedCount / suppliedAppsCount;
 
         printDistribution(statesDistribution);
-        formatAndPrintDouble("Pбл", 0);
-        formatAndPrintDouble("Lоч", 0);
-        formatAndPrintDouble("Wоч", 0);
+        formatAndPrintDouble("Pbl", 0);
+        formatAndPrintDouble("Lq", 0);
+        formatAndPrintDouble("Wq", 0);
         formatAndPrintDouble("A", (double) releasedAppsCount / totalTicks);
-        formatAndPrintDouble("Lc", (double) processingAppsCountSum / totalTicks);
-        formatAndPrintDouble("Pотк", failProb);
+        formatAndPrintDouble("Ls", (double) processingAppsCountSum / totalTicks);
+        formatAndPrintDouble("Pfail", failProb);
         formatAndPrintDouble("Q", 1.0 - failProb);
-        formatAndPrintDouble("Wc", (double) totalLiveTimeSum / releasedAppsCount);
-        formatAndPrintDouble("Kкан1", getChannelBusiness(statesDistribution, 0, totalTicks));
-        formatAndPrintDouble("Kкан2", getChannelBusiness(statesDistribution, 1, totalTicks));
-        formatAndPrintDouble("Kкан3", getChannelBusiness(statesDistribution, 2, totalTicks));
+        formatAndPrintDouble("Ws", (double) totalLiveTimeSum / releasedAppsCount);
+        formatAndPrintDouble("Kch1", getChannelBusiness(statesDistribution, 0, totalTicks));
+        formatAndPrintDouble("Kch2", getChannelBusiness(statesDistribution, 1, totalTicks));
+        formatAndPrintDouble("Kch3", getChannelBusiness(statesDistribution, 2, totalTicks));
     }
 
     private static String stringifyStateTransition(State prevState, Set<Condition> conditions, State nextState) {
