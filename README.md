@@ -1,7 +1,7 @@
 # queuing-system
 САиММод, лабораторная работа № 4. Вариант 43
 
-Java 17 is highly recommended.
+Java 17 is MUST HAVE.
 
 Usage:
 Arguments: ```pi1 pi2 pi3 p ticks_count```
